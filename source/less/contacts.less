@@ -1,0 +1,69 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+
+  &__tel,
+  &__info,
+  &__adress {
+    font-family: "GothamPro-Medium";
+    font-weight: lighter;
+    font-size: 13px;
+    font-style: normal;
+    opacity: 0.8;
+    color: #ffffff;
+    width: 100px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .contacts {
+    padding-left: 103px;
+    padding-right: 87px;
+    padding-top: 16px;
+    align-items: center;
+
+    &__tel,
+    &__adress,
+    &__info {
+      position: relative;
+      width: 182px;
+      line-height: 24px;
+    }
+
+    &__tel::after {
+      position: absolute;
+      content: "";
+      opacity: 1;
+      top: 18px;
+      left: -30px;
+      background-image: url(../img/icon-phone.svg);
+      background-repeat: no-repeat;
+      width: 13px;
+      height: 13px;
+    }
+
+    &__adress::after {
+      position: absolute;
+      content: "";
+      top: 17px;
+      left: -28px;
+      background-image: url(../img/icon-map.svg);
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 20px;
+    }
+
+
+    &__description {
+      font-family: "GothamPro";
+      font-size: 13px;
+      font-style: normal;
+      opacity: 0.5;
+    }
+
+    &__logo {
+      margin-top: -4px;
+      margin-right: 15px;
+    }
+  }
+}

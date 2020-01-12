@@ -1,0 +1,152 @@
+.photoshoot {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+  & h2 {
+    font-family: "PlayfairDisplay-Bold";
+    font-size: 25px;
+    color: #080425;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+    padding: 5px 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 0;
+    margin-top: -5px;
+    margin-left: 52px;
+    height: 40px;
+    width: 50px;
+    background-color: #fab91e;
+    font-family: "GothamPro-Medium";
+    font-size: 12px;
+    line-height: 40px;
+    color: #080425;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      content: '\2192';
+    }
+
+    &:hover {
+      background-color: #d39500;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    background-color: white;
+    width: 70%;
+    height: 100px;
+    top: 173px;
+    right: 0px;
+    text-align: center;
+    font-family: "ProximaNova";
+    font-weight: bold;
+    font-size: 18px;
+    color: #080425;
+    padding-top: 15px;
+
+    &:hover {
+      color: #d39500;
+    }
+  }
+}
+
+@media (min-width: @tablet) {
+
+  img:hover {
+    transform: scale(1.1);
+  }
+  .photoshoot {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__item {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .photoshoot {
+    margin-top: -1px;
+
+    & h2 {
+      font-size: 52px;
+      letter-spacing: 1px;
+      margin-top: -6px;
+    }
+    &__list {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-top: 7px;
+      width: 1122px;
+    }
+
+    &__item {
+      position: relative;
+      display: block;
+      width: 340px;
+      height: 270px;
+      padding: 36px 0 0;
+      margin: 0 0 40px;
+    }
+
+    &__link {
+      position: absolute;
+      content: "";
+      z-index: 6;
+      width: 44px;
+      height: 44px;
+      background-color: #fab91e;
+      top: 268px;
+      left: -17px;
+      font-size: 0px;
+      background-image: url(../img/arrow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__description {
+      position: absolute;
+      padding-top: 40px;
+      padding-right: 37px;
+      padding-left: 44px;
+      text-align: initial;
+      font-family: "ProximaNova-Bold";
+      font-size: 18px;
+      color: #080425;
+      z-index: 5;
+      width: 262px;
+      height: 88px;
+      top: 201px;
+      left: 78px;
+      background-color: #fff;
+
+      &--3,
+      &--4,
+      &--8 {
+        width: 234px;
+      }
+    }
+  }
+}
