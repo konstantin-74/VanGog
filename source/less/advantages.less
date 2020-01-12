@@ -1,0 +1,154 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+
+  &__head-small {
+    position: relative;
+    font-family: "ProximaNova-Regular";
+    font-size: 12px;
+    color: #080425;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      height: 11px;
+      width: 12px;
+      margin-left: -6px;
+      background-color: #fab91e;
+    }
+  }
+
+  & h2 {
+    font-family: "PlayfairDisplay-Bold";
+    font-size: 25px;
+    color: #080425;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__list {
+    list-style: none;
+    color: #080425;
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+
+    &--decor  {
+      background-image: url(../img/icon\ 1.webp);
+    }
+
+    &--rooms {
+      background-image: url(../img/icon\ 2.webp);
+    }
+
+    &--profi {
+      background-image: url(../img/icon\ 3.webp);
+    }
+
+    &--profi-tech {
+      background-image: url(../img/icon\ 4.webp);
+    }
+
+    &--partnership {
+      background-image: url(../img/icon\ 5.webp);
+    }
+  }
+
+  &__head {
+    font-family: "PlayfairDisplay-Bold";
+    font-size: 16px;
+    padding-top: 100px;
+  }
+
+  &__description {
+    font-family: "ProximaNova-Regular";
+    font-size: 14px;
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet) {
+  .advantages {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 300px;
+      margin-top: 30px;
+    }
+
+    &__head-small {
+      margin-top: 35px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .advantages {
+    &__head-small {
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-top: 88px;
+      opacity: 0.6;
+    }
+
+    & h2 {
+      font-size: 52px;
+      letter-spacing: 1px;
+      margin-top: -6px;
+    }
+
+    &__list {
+      margin-top: 48px;
+    }
+
+    &__head {
+      margin-top: 10px;
+      letter-spacing: 0.4px;
+    }
+
+    &__description {
+      margin-top: -8px;
+      line-height: 20.8px;
+    }
+
+    &__item {
+      width: 314px;
+      height: 220px;
+      margin: 0px 38px;
+
+      &:nth-child(4) {
+        margin-top: 4px;
+        margin-left: 235px;
+      }
+
+      &:nth-child(3) {
+        margin-right: 40px;
+      }
+
+      &:last-child{
+        margin-top: 5px;
+        margin-right: 229px;
+        margin-left: 6px;
+        width: 325px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  min-width: 320px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+@media (min-width: @desktop) {
+  .container {
+    position: relative;
+    width: 1280px;
+    padding: 0 53px;
+    margin: 0 auto;
+    height: inherit;
+
+    &::before {
+      position: absolute;
+      z-index: 10;
+      content: "";
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 1px;
+      opacity: 0.1;
+      box-shadow: 248px 0 1px #ebebeb, 444px 0 1px #ebebeb, 640px 0 1px #ebebeb, 836px 0 1px #ebebeb, 1032px 0 1px #ebebeb;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 10;
+      content: "";
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 1px;
+      opacity: 0.3;
+      box-shadow:
+      52px 0 0.5px #ebebeb, 1227px 0 0.5px #ebebeb;
+    }
+  }
+}

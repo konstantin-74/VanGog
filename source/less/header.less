@@ -1,0 +1,127 @@
+.page-header {
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/Layer\ 7.webp);
+  background-color: #211e3b;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.head-text {
+  &__head {
+    font-family: "PlayfairDisplay-Bold";
+    font-size: 31px;
+    margin: 0;
+    padding-left: 6%;
+  }
+  &__description {
+    font-family: "GothamPro";
+    font-size: 14px;
+    margin: 0;
+    margin-top: 32px;
+    padding-left: 9%;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  &__link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+    height: 40px;
+    width: 115px;
+    border-radius: 5px;
+    background-color: #fab91e;
+    font-family: "GothamPro-Medium";
+    font-size: 12px;
+    line-height: 40px;
+    color: #080425;
+    text-align: center;
+
+
+    &:hover {
+         background-color: #d39500;
+    }
+  }
+}
+
+@media (min-width: @tablet) {
+  .page-header {
+    background-image: url(../img/main_background.webp);
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+  }
+
+}
+
+@media (min-width: @desktop) {
+  .page-header {
+    height: 100vh;
+  }
+
+  .wrapper {
+    width: 1174px;
+    margin-top: 190px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 482px;
+      left: -30px;
+      width: 2px;
+      height: 4px;
+      border-radius: 48%;
+      border: 2px solid #fff;
+    }
+  }
+
+  .head-text {
+    &__head {
+      font-size: 52px;
+      display: block;
+      width: 635px;
+      margin-left: 25px;
+      margin-top: 7px;
+      letter-spacing: 1px;
+      line-height: 65.5px;
+    }
+
+    &__description {
+      font-size: 18px;
+      display: block;
+      font-weight: 400;
+      width: 487px;
+      margin-left: 95px;
+      margin-top: 22px;
+      line-height: 28px;
+      padding: 0;
+      letter-spacing: -0.1px;
+    }
+
+    &__wrapper {
+      justify-content: start;
+    }
+
+    &__link {
+      margin-left: 63px;
+      border-radius: 0;
+      width: 170px;
+      margin-top: 42px;
+      height: 50px;
+      font-size: 15px;
+      line-height: 50px;
+
+      &:last-child {
+        margin-left: 21px;
+      }
+    }
+  }
+}

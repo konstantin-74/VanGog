@@ -1,0 +1,115 @@
+.org {
+  display: flex;
+  flex-direction: column;
+
+  &__description {
+    display: block;
+    height: 100px;
+    width: 75%;
+    font-family: "PlayfairDisplay-Bold";
+    font-weight: bold;
+    font-size: 16px;
+    color: #080425;
+    padding: 10px 150px 10px 10px;
+    cursor: pointer;
+  }
+
+  &__left {
+    background-image: url(../img/footer_left.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #fab91e;
+    width: 100%;
+
+    &:hover {
+      background-color: #d39500;
+    }
+  }
+
+  &__right {
+    background-image: url(../img/footer_right.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #fab91e;
+    width: 100%;
+
+    &:hover {
+      background-color: #d39500;
+    }
+  }
+}
+
+
+@media (min-width: @tablet) {
+  .org__wrapper {
+    margin-top: 25px;
+      display: flex;
+  }
+}
+
+
+@media (min-width: @desktop) {
+  .org {
+    margin-top: 92px;
+    &__wrapper {
+     display: flex;
+    }
+    &__left,
+    &__right {
+      display: block;
+      height: 141px;
+      background-color: #fab91e;
+      background-repeat: no-repeat;
+      font-family: "PlayfairDisplay-Bold";
+      font-weight: 700;
+      font-size: 16px;
+      color: #080425;
+      line-height: 24px;
+      width: 100%;
+      background-position-y: center;
+      background-position-x: 442px;
+    }
+    &__right {
+      background-position-x: 446px;
+    }
+
+    &__description {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      width: 284px;
+      padding-left: 97px;
+      margin-top: 39px;
+      letter-spacing: 0.5px;
+    }
+    &__right p {
+      padding-left: 93px;
+      margin-top: 46px;
+
+      &::before {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        content: '';
+        background-repeat: no-repeat;
+        top: 22px;
+        left: 383px;
+        background-image: url(../img/arrow.png);
+       }
+    }
+
+    &__left p {
+
+      &::before {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        content: '';
+        background-repeat: no-repeat;
+        top: 28px;
+        left: 381px;
+        background-image: url(../img/arrow.png);
+       }
+    }
+  }
+}
