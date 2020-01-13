@@ -1,2 +1,2 @@
-# VanGog.github.io
+# VanGog
 Adaptive test site 
