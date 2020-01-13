@@ -1,2 +1,2 @@
 # VanGog
-test site photo studio
+Adaptive test site 
